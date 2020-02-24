@@ -6,12 +6,12 @@ module.exports = {
     create
 }
 function index(req, res) {
-    res.render('flights/index', {
-      flights: Flight.getAll()
-    });
-  }
+  Flight.find({}, function(err, flights) {
+    res.render('flights/index', { title: 'All Flights', flights });
+  });
+}
 function newFlight(req, res) {
-    res.render('flights/new')
+    res.render('flights/new',)
 }
 
 function create(req, res) {

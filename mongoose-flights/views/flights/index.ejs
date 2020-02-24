@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flights</title>
-    <link rel="public/stylesheet" type="text/css" href="style.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
-    <h1>Flights</h1>
-    <a href ="/flights">Go Back Home</a>
-    <ul>
-        <% flights.forEach(function(flight, idx) { %>
-            <li>
-                <a href="/flights/<%=idx%>"> <%= flight.airline%></a>
-            </li>
-            <% }); %>
-        </ul>
-    <a href="/flights/new">Add Flight</a>
+    <table id="list">
+        <thead>
+            <tr>
+              <th>Airline</th>
+              <th>Flight<br>Flight Number</th>
+              <th>Departs</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% flights.forEach(function(f) { %>
+              <tr>
+                <td><%= f.airline %></td>
+                <td><%= f.flightNo %></td>
+                <td><%= f.departs.toLocaleString() %></td>
+                <td><a href="/flights/<%= f._id %>">DETAILS</a></td>
+              </tr>
+              <% }); %>
+            </tbody>
+          </table>
 </body>
 </html>

@@ -4,6 +4,7 @@ const flightsCtrl = require('../controllers/flights');
 
 // GET /flights/new & ditch the annonymous inline function, replace it with flightsCtrl.new
 router.get('/new', flightsCtrl.new);
+router.get('/', flightsCtrl.index);
 
 //POST /movies
 router.post('/', flightsCtrl.create);
