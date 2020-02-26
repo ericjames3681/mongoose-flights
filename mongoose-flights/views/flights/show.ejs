@@ -1,19 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <section id="show-page">
-        <div>Title: </div>
-        <div><%= flight.airline %></div>
-        <div>Flight No: </div>
-        <div><%= flight.flightNo %></div>
-        <div>Departs: </div>
-        <div><%= flight.departs %></div>
-    </section>
-    
-</body>
-</html>
+<%- include('../partials/header') %>
+
+<h1>Single Flight</h1>
+    <fieldset>
+        <legend>Flight Details</legend>
+        <table id="list">
+            <thead>
+            <tr>
+              <th>Airline</th>
+              <th>Flight Number</th>
+              <th>Departs</th>
+              <th>Airport</th>
+              <th>Destinations</th>
+            </tr>
+            </thead>
+          <tbody>
+              <tr>
+                <td><%= flight.airline %></td>
+                <td><%= flight.flightNo %></td>
+                <td><%= flight.departs %></td>
+                <td><%= flight.airport %></td>
+                <td><%= flight.destinations %></td>
+              </tr>
+              <label for="airline">Add Destination: </label>
+              <select name="airport" id="airline">
+                  <option value="AUS">Austin</option> 
+                  <option value="DFW">Dallas/Fort Worth</option> 
+                  <option value="DEN">Denver</option> 
+                  <option value="LAX">Los Angeles</option>
+                  <option value="SAN">San Diego</option>  
+              </select> 
+              <button type="submit" href="/flights">SUBMIT</button>
+
+            </tbody>
+        </table>
+    </fieldset>
+<%- include('../partials/footer') %>

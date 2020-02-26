@@ -1,24 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mongoose Flights</title>
-    <link rel="stylesheet" href="/stylesheets/style.css">
-</head>
-<body>
+<%- include('../partials/header') %>
+
     <h1>Create New Flight</h1>
     <form action="/flights" method="POST" autocomplete="off">
         <fieldset> 
             <legend>Flight Details</legend>
-            <label for="flight">Flight: </label>
+            <label for="flight">Airline: </label>
             <input type="text" name="airline" id="flight">
             <label for="flight">Flight Number: </label>
             <input type="number" name="flightNo" id="flight">
-            <label for="flight">Flight Number: </label>
+            <label for="flight">Departs: </label>
             <input type="Date" name="departs" id="flight">
-            <button type="submit">SUBMIT</button>
         </fieldset>
-    </form>       
-</body>
-</html>
+    </form> 
+
+<%- include('../partials/footer') %>
