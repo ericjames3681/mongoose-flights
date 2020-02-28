@@ -1,9 +1,9 @@
 <%- include('../partials/header') %>
 
-    <h1>Create New Flight</h1>
-    <form action="/flights" method="POST" autocomplete="off">
+    <h1>Add New Ticket</h1>
+    <form action="/flights/<%= flightId %>/tickets" method="POST">
         <fieldset> 
-            <legend>Flight Details</legend>
+            <legend>Ticket Details</legend>
             <label for="flight">Airline: </label>
             <input type="text" name="airline" id="flight">
             <label for="flight">Flight Number: </label>

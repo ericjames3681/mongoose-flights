@@ -7,9 +7,10 @@ a {
   color: #00B7FF;
 }
 
-#show-page {
+#show-page *, #airline * {
+  color: lightblue;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto;
   grid-gap: 4rem;
 }
 
